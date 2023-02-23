@@ -1,6 +1,6 @@
 # Identifying Small Body Geometry Factors and Correlations
 - **Team Leader:**
-- **Other Group Members:** Madeline Pastuszek (madelinepast), 
+- **Other Group Members:** Madeline Pastuszek (madelinepast), Nathan Bigelow
 ### Summary:
 -
 ### Background Information:
