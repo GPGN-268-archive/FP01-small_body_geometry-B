@@ -8,9 +8,12 @@
 ### Problem Statement:
 -
 ### Questions:
--
+- 
 ### Objectives:
--
+- To recreate and develop models similar to that of the 3D Asteroid Catalogue.
+- To better our understanding of how small bodies' geometry differs and is influenced by other planetary and solar factors
+- To help create a more definitive conclusion about why certain small bodies have particular geometries
+- To develop a stronger understanding of python components and methods of modeling and data analysis
 ### Datasets:
 - [SSD](https://ssd.jpl.nasa.gov/tools/gravity.html#/)
 - [NASA](https://pdssbn.astro.umd.edu/index.shtml)
@@ -20,7 +23,7 @@
 ## Methods:
 -
 ## Expected Outcome(s):
--
+- We hope that the results of this project will help us understand more about small 
 ### References:
 - [1] https://www.iau.org/news/pressreleases/detail/iau0603/#3
 - [2] https://3d-asteroids.space/
