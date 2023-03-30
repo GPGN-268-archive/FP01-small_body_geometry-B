@@ -8,7 +8,12 @@
 ### Problem Statement:
 -
 ### Questions:
-- 
+- What influences a small body's geometry?
+- Does where a small body exists in the solar system impact geometry?
+- Is small body geometry impacted by what other bodies (large or small) exist around it?
+- Do the geological components (rock, ice, dust, etc.) of small bodies impact geometry?
+- Can we develop models that are similar to what already exists?
+- How can these models and conclusions help us learn more about other small bodies and make predictions about a wider subject?
 ### Objectives:
 - To recreate and develop models similar to that of the 3D Asteroid Catalogue.
 - To better our understanding of how small bodies' geometry differs and is influenced by other planetary and solar factors
@@ -20,10 +25,11 @@
 - [3D Asteroid Catalogue] (https://3d-asteroids.space/) 
 ### Tools/Packages:
 -
-## Methods:
+### Methods:
 -
-## Expected Outcome(s):
-- We hope that the results of this project will help us understand more about small 
+### Expected Outcome(s):
+- We hope that the results of this project will help us understand more about small bodies within our solar system. By organizing data and modeling these bodies, we will be able to draw conclusions about how small bodies get their geometries and what fators, such as larger bodies, gravity influences, and body compositiion, also influence their geomentry. 
+- In addition, this project will help us grow more confortable with using and applying python in geophysical and planetary projects. The processes done in this work will better our abilities to load, manipulate, and process data with python, as well as creating and formulating modeling techniques that correspond with the project's requirements. 
 ### References:
 - [1] https://www.iau.org/news/pressreleases/detail/iau0603/#3
 - [2] https://3d-asteroids.space/
