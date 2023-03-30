@@ -2,11 +2,14 @@
 - **Team Leader:** Jalen Perkins
 - **Other Group Members:** Madeline Pastuszek (madelinepast), Nathan Bigelow
 ### Summary:
--
+- In the past 50 years, NASA and other organizations have worked to collect a variety of data about the geometry of many known small bodies in space. Thanks to the internet, much of the small body data that has been collected is now publicly available, allowing us to analyze it. This data has been collected by various methods, most notably Spacecraft imaging, Radar Imaging and Lightcurve Inversion [2]. Each of these methods has their own pros and cons with Spacecraft Imaging being the most accurate but most costly, and Lightcurve Inversion being the most attainable but least accurate. The 3D Asteroid Catalogue provides a plethora of reliable data on the geometry of thousands of small bodies, including asteroids, comets, dwarf planets and moons, which is where we will be deriving our geometric data from. Our goal is to use this data to analyze several small bodies and determine if there are any correlations between their mass, shape, orbital parameters, and other parameters. 
+
 ### Background Information:
 - According to the 2006 IAU resolution, small bodies are considered to be 'all objects [excluding defined planets, dwarf planets, and satellites] orbiting the Sun' [1]. Thus, small bodies can include comets, asteroids, objects in the Kuiper Belt and the Oort cloud, small planetary satellites, and interplanetary dust and also make up a large percentage of our solar system. The variety of these bodies lends to the variety of found geometries and locations when bodies have been observed. Organizations, such as NASA, have begun an effort to catagorize and document these small bodies, usually using data collected by space craft, probes, radar imaging, and lightcurving inversion [2]. Through these methods, various databases have been created in order to help planetary scientists study and draw conclusions about small bodies in the solar system.
+
 ### Problem Statement:
--
+- In the field of Geophysics, we have a large amount of data and knowledge about the earth and its mechanics, yet far less is known about other bodies in space. As we continue to learn about other planets, moons, and bodies in our solar system, we see more and more just how unique the earth is in terms of mechanics, indicating that much of our knowledge about the earth may not apply to most other bodies in space. One area which we know relatively little about is the geometry and mechanics of small bodies, like asteroids, comets, moons, and dwarf planets. By studying the geometry of some of these small bodies and looking for any correlations between their size, mass, and orbits, we may be able to make some interpretations of how these bodies form, and why they exist where they do. If successful, this type of information would be useful for more distal space travel, predictions of collisions, and possibly even space mining resources. 
+
 ### Questions:
 - What influences a small body's geometry?
 - Does where a small body exists in the solar system impact geometry?
