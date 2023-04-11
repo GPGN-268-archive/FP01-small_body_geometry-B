@@ -34,5 +34,5 @@
 - We hope that the results of this project will help us understand more about small bodies within our solar system. By organizing data and modeling these bodies, we will be able to draw conclusions about how small bodies get their geometries and what fators, such as larger bodies, gravity influences, and body compositiion, also influence their geomentry. 
 - In addition, this project will help us grow more confortable with using and applying python in geophysical and planetary projects. The processes done in this work will better our abilities to load, manipulate, and process data with python, as well as creating and formulating modeling techniques that correspond with the project's requirements. 
 ### References:
-- [1]https://www.iau.org/news/pressreleases/detail/iau0603/#3
-- [2]https://3d-asteroids.space/
+- [1](https://www.iau.org/news/pressreleases/detail/iau0603/#3)
+- [2](https://3d-asteroids.space/)
