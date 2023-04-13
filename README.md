@@ -29,7 +29,15 @@
 ### Tools/Packages:
 -
 ### Methods:
--
+- Create function to read and organize data files by verticies and faces
+- Find the # of verticies and faces
+- Plot the data files to initially visualize the object
+- Calculate the center of mass
+- Calculate the radius of surface points to the center of mass to find a vector
+- Calculate the normal vector of each individual face (possibly calculate face center so that display is uniform)
+- Plot the normal vectors to visualize 
+- Calculate the dot product of the normal vector and the internal vector to determine how aligned they are, thus how spherical the object is
+- Plot the sphericity of the object 
 ### Expected Outcome(s):
 - We hope that the results of this project will help us understand more about small bodies within our solar system. By organizing data and modeling these bodies, we will be able to draw conclusions about how small bodies get their geometries and what fators, such as larger bodies, gravity influences, and body compositiion, also influence their geomentry. 
 - In addition, this project will help us grow more confortable with using and applying python in geophysical and planetary projects. The processes done in this work will better our abilities to load, manipulate, and process data with python, as well as creating and formulating modeling techniques that correspond with the project's requirements. 
