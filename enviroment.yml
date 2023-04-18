@@ -1,0 +1,8 @@
+name: GPGN268
+channels:
+ - conda-
+dependencies:
+matplotlib
+plotly
+numpy
+pandas
