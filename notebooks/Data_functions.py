@@ -13,6 +13,10 @@ def getData(path):
 			vfs.append(q)
 	verts = []
 	faces = []
+	
+	for i in range(vfs.count('')):
+		vfs.remove('')
+	
 	for i in range(len(vfs)):
 		vfs[i] = vfs[i].split(' ')
 		for j in range(vfs[i].count('')):
