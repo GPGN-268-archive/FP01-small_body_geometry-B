@@ -1,6 +1,6 @@
 # Identifying Small Body Geometry Factors and Correlations
-- **Team Leader:** Jalen Perkins
-- **Other Group Members:** Madeline Pastuszek (madelinepast), Nathan Bigelow
+- **Team Leader:** Jalen Perkins (Jalen-Perkins)
+- **Other Group Members:** Madeline Pastuszek (madelinepast), Nathan Bigelow (Nbig17)
 ### Summary:
 - In the past 50 years, NASA and other organizations have worked to collect a variety of data about the geometry of many known small bodies in space. Thanks to the internet, much of the small body data that has been collected is now publicly available, allowing us to analyze it. This data has been collected by various methods, most notably Spacecraft imaging, Radar Imaging and Lightcurve Inversion [2]. Each of these methods has their own pros and cons with Spacecraft Imaging being the most accurate but most costly, and Lightcurve Inversion being the most attainable but least accurate. The 3D Asteroid Catalogue provides a plethora of reliable data on the geometry of thousands of small bodies, including asteroids, comets, dwarf planets and moons, which is where we will be deriving our geometric data from. Our goal is to use this data to analyze several small bodies and determine if there are any correlations between their mass, shape, orbital parameters, and other parameters. 
 
