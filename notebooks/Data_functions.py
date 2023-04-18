@@ -28,7 +28,7 @@ def getData(path):
 	
 	df_f = pd.DataFrame(faces, columns= ['x','y','z'])
 	df_v = pd.DataFrame(verts, columns= ['x','y','z'])
-	df_v= (df_v-(df_v.max(0)+df_v.min(0))/2)/max(df_v.max(0)-df_v.min(0))
+	#df_v= (df_v-(df_v.max(0)+df_v.min(0))/2)/max(df_v.max(0)-df_v.min(0))
 	
 	return df_v, df_f
 	
