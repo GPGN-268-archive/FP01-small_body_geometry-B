@@ -1,14 +1,14 @@
-<<<<<<< HEAD
+
 # Identifying Small Body Geometry Factors and Correlations
-<<<<<<< HEAD
+
 - **Team Leader:**
-=======
+
 - **Team Leader:** Jalen Perkins
->>>>>>> 837f2a6e682c796387a8ab06f8a8856775df6cca
+
 - **Other Group Members:** Madeline Pastuszek (madelinepast), Nathan Bigelow
 ### Summary:
 - In the past 50 years, NASA and other organizations have worked to collect a variety of data about the geometry of many known small bodies in space. Thanks to the internet, much of the small body data that has been collected is now publicly available, allowing us to analyze it. This data has been collected by various methods, most notably Spacecraft imaging, Radar Imaging and Lightcurve Inversion [2]. Each of these methods has their own pros and cons with Spacecraft Imaging being the most accurate but most costly, and Lightcurve Inversion being the most attainable but least accurate. The 3D Asteroid Catalogue provides a plethora of reliable data on the geometry of thousands of small bodies, including asteroids, comets, dwarf planets and moons, which is where we will be deriving our geometric data from. Our goal is to use this data to analyze several small bodies and determine if there are any correlations between their mass, shape, orbital parameters, and other parameters. 
-=======
+
 # Identifying Small Body Sphericity and Correlating Factors
 - **Team Leader:** Jalen Perkins (Jalen-Perkins)
 - **Other Group Members:** Madeline Pastuszek (madelinepast), Nathan Bigelow (Nbig17)
@@ -16,7 +16,7 @@
 - In the past 50 years, NASA and related organizations have worked to collect data about the geometry of many known small bodies in space. The 3D Asteroid Catalogue is a database that catalogues the geometry of thousands of small bodies. Our goal is to use this data to analyze several small bodies and determine how the object's relative sphericity may relate to other influencing factors, such as size, location, orbital characteristics, and other parameters. 
 ### How to Use this Repository:
 -
->>>>>>> 5727c2b81ada2a3c88f2136d2d80a5b234a2caea
+
 
 ### Introduction:
 
