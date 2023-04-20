@@ -46,3 +46,42 @@ def getData(path):
 	
 	return df_v, df_f
 	
+# geometric center function
+
+def obj_center(df_vert):
+    '''
+    This function takes a dataframe containing the x, y, and z coordinates of several points and returns
+    the coordinates of the geometric center of that object
+    
+    Parameters:
+        df_vert: a three-dimensional dataframe of the object verticies (x,y,z)
+            - must have numeric entries
+        
+    Returns:
+        center_point: a list containing the x, y, and z coordinates of the geometric center
+    '''
+    av_x = np.sum(df_vert['x'])/len(df_vert['x'])
+    av_y = np.sum(df_vert['y'])/len(df_vert['y'])
+    av_z = np.sum(df_vert['z'])/len(df_vert['z'])
+    
+    center_point = [av_x,av_y,av_z]
+    return center_point
+
+# verticies vectors function
+
+def vert_vectors(df_vert):
+    '''
+    This function takes a dataframe containing the x, y, and z coordinates of several points and returns
+    the vectors from the center point to each of those points
+    
+    Parameters:
+        df_vert: a three-dimensional dataframe of the object verticies (x,y,z)
+            - must have numeric entries
+            
+    Returns:
+        v: a dataframe with the same dimensions as df_vert with the x, y, and z components of the verticies 
+        vectors
+    
+    '''
+    v = df_vert - obj_center(df_vert)
+    return v
