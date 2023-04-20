@@ -1,14 +1,3 @@
-
-# Identifying Small Body Geometry Factors and Correlations
-
-- **Team Leader:**
-
-- **Team Leader:** Jalen Perkins
-
-- **Other Group Members:** Madeline Pastuszek (madelinepast), Nathan Bigelow
-### Summary:
-- In the past 50 years, NASA and other organizations have worked to collect a variety of data about the geometry of many known small bodies in space. Thanks to the internet, much of the small body data that has been collected is now publicly available, allowing us to analyze it. This data has been collected by various methods, most notably Spacecraft imaging, Radar Imaging and Lightcurve Inversion [2]. Each of these methods has their own pros and cons with Spacecraft Imaging being the most accurate but most costly, and Lightcurve Inversion being the most attainable but least accurate. The 3D Asteroid Catalogue provides a plethora of reliable data on the geometry of thousands of small bodies, including asteroids, comets, dwarf planets and moons, which is where we will be deriving our geometric data from. Our goal is to use this data to analyze several small bodies and determine if there are any correlations between their mass, shape, orbital parameters, and other parameters. 
-
 # Identifying Small Body Sphericity and Correlating Factors
 - **Team Leader:** Jalen Perkins (Jalen-Perkins)
 - **Other Group Members:** Madeline Pastuszek (madelinepast), Nathan Bigelow (Nbig17)
@@ -38,25 +27,32 @@
 - To better our understanding of how small bodies' geometry differs and is influenced by other planetary and solar factors
 - To help create a more definitive conclusion about why certain small bodies have particular geometries
 - To develop a stronger understanding of python components and methods of modeling and data analysis
+
 ### Datasets:
 - [SSD](https://ssd.jpl.nasa.gov/tools/gravity.html#/)
 - [NASA](https://pdssbn.astro.umd.edu/index.shtml)
 - [3D Asteroid Catalogue](https://3d-asteroids.space/) 
+
 ### Tools/Packages:
+- [matplotlib](https://matplotlib.org/)
+- [pandas](https://pandas.pydata.org/)
+- [numpy](https://numpy.org/)
+- [scipy](https://pypi.org/project/Scripy/)
 - [plotly](https://plotly.com/)
+
 ### Methods:
-- Create function to read and organize data files by verticies and faces
-- Find the # of verticies and faces
-- Plot the data files to initially visualize the object
-- Calculate the center of mass
-- Calculate the radius of surface points to the center of mass to find a vector
-- Calculate the normal vector of each individual face (possibly calculate face center so that display is uniform)
-- Plot the normal vectors to visualize 
-- Calculate the dot product of the normal vector and the internal vector to determine how aligned they are, thus how spherical the object is
-- Plot the sphericity of the object 
+- Write a function that can read the asteroid files and organize the vertices and faces.
+- Write a function that will plot the asteroids as models in an interactive, 3-D plot.
+- Calculate the center of mass and plot it.
+- Calculate the radius of the surface points from the center of mass to identify a vector.
+- Calculate the normal vector of each individual face.
+- Calculate the dot product of the normal vector and the internal vector to determine how aligned they are, thus how spherical the object is.
+- Plot the sphericity of the object.
+
 ### Expected Outcome(s):
-- We hope that the results of this project will help us understand more about small bodies within our solar system. By organizing data and modeling these bodies, we will be able to draw conclusions about how small bodies get their geometries and what fators, such as larger bodies, gravity influences, and body compositiion, also influence their geomentry. 
+- We hope that the results of this project will help us understand more about small bodies within our solar system. By organizing data and modeling these bodies, we will be able to draw conclusions about how the sphericity of small bodies is influenced by other factors, such as larger bodies, gravity influences, and body compositiion.
 - In addition, this project will help us grow more confortable with using and applying python in geophysical and planetary projects. The processes done in this work will better our abilities to load, manipulate, and process data with python, as well as creating and formulating modeling techniques that correspond with the project's requirements. 
+
 ### References:
 - [[1]](https://www.iau.org/news/pressreleases/detail/iau0603/#3)
 - [[2]](https://3d-asteroids.space/)
