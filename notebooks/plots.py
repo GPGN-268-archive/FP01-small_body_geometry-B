@@ -12,7 +12,7 @@ from scipy import ndimage
 # import our created function to read files
 from Data_functions import getData
 from Data_functions import normal_vectors
-from Data_functions import vert_vectors2
+from vector_functions import vert_vectors2
 
 
 def makePlot(path):
