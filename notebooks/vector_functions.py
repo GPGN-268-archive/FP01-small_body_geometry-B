@@ -154,3 +154,50 @@ def normal_vectors(path_to_file):
     df_N = pd.DataFrame(norms, columns = ['u', 'v','w'])
 
     return df_N, face_center
+
+def vert_vectors2(path_to_file):
+    
+    getData(path_to_file)
+    
+    verts = []
+    verts_x = []
+    verts_y = []
+    verts_x = []
+    points= ['x','y','z']
+
+    for point in points:
+        verts = []
+        for vert_num in df_f[point]:
+            # print(vert_num)
+            vert_x = df_v['x'][vert_num-1]
+            vert_y = df_v['y'][vert_num-1]
+            vert_z = df_v['z'][vert_num-1]
+
+            vert_coords = [vert_x , vert_y , vert_z]
+            # print(vert_coords)
+
+            verts.append(vert_coords)
+        if point == 'x':
+            verts_x = verts
+        elif point == 'y':
+            verts_y = verts
+        elif point == 'z':
+            verts_z = verts
+        #print(point)
+
+    # the coordinates of the first vertex of the face
+    df_X = pd.DataFrame(verts_x, columns = ['x', 'y','z'])
+    #print(df_X)
+    #print('======')
+
+    # the coordinates of the second vertex of the face
+    df_Y = pd.DataFrame(verts_y, columns = ['x', 'y','z'])
+    #print(df_Y)
+    #print('======')
+
+    # the coordinates of the third vertex of the face
+    df_Z = pd.DataFrame(verts_z, columns = ['x', 'y','z'])
+    #print(df_Z)
+    
+    v = df_X - obj_center(path_to_file)
+    return v
