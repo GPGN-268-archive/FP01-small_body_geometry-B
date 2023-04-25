@@ -11,6 +11,8 @@ from scipy import ndimage
 
 # import our created function to read files
 from Data_functions import getData
+from Data_functions import normal_vectors
+
 
 def makePlot(path):
     
@@ -45,3 +47,22 @@ def makePlot(path):
     plt.ylabel('y') 
     
     return plt.show()
+
+def plot_normals(path_to_file):
+    
+    normal_vectors(path_to_file)
+
+    # plot the normal vectors to the body using plotly cone plot
+
+    fig = go.Figure(data = go.Cone(
+        x=face_center['x'],
+        y=face_center['y'],
+        z=face_center['z'],
+        u=df_N['u'],
+        v=df_N['v'],
+        w=df_N['w'],
+        colorscale='Blues',
+        sizemode="absolute",
+        sizeref=5))
+
+    fig.show()

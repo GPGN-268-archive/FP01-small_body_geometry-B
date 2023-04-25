@@ -65,26 +65,27 @@ def plotNormals(path):
     
 # verticies vectors function
 
-def vert_vectors(df_vert):
+def vert_vectors(path_to_file):
     '''
-    This function takes a dataframe containing the x, y, and z coordinates of several points and returns
-    the vectors from the center point to each of those points
+    docstring
     
-    Parameters:
-        df_vert: a three-dimensional dataframe of the object verticies (x,y,z)
-            - must have numeric entries
-            
+    This function computes the three dimensional vector components for the vectors connecting the
+    the geometric center to each of the verticies.
+    
+    Parameters: 
+        vert_df: a dataframe containing the x, y, and z coordinates of all verticies
+        
     Returns:
-        v: a dataframe with the same dimensions as df_vert with the x, y, and z components of the verticies 
-        vectors
-    
+        v: a dataframe containing the x, y, and z vector components for each of the verticies
     '''
-    v = df_vert - obj_center(df_vert)
+    getData(path_to_file)
+    
+    v = df_v - obj_center(path_to_file)
     return v
 
 # Normal Vectors
 
-def normal_vectors(df_v,df_f):
+def normal_vectors(path_to_file):
     
     '''
     docstring:
@@ -101,7 +102,9 @@ def normal_vectors(df_v,df_f):
         
         face_center: dataframe containing the coordinates of the center points of each face
     '''
-
+    
+    getData(path_to_file)
+    
     verts = []
     verts_x = []
     verts_y = []
