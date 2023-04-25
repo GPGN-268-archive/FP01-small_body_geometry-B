@@ -85,3 +85,73 @@ def vert_vectors(df_vert):
     '''
     v = df_vert - obj_center(df_vert)
     return v
+
+# Normal Vectors
+
+def normal_vectors(df_v,df_f):
+    
+    '''
+    docstring:
+    This function takes data from the faces and verticies of a given object and returns the normal vectors 
+    for each face.
+    
+    Parameters: 
+        df_v: dataframe containing the verticies coordinates of the object
+        
+        df_f: dataframe containing the face references for the object
+        
+    Returns:
+        df_N: dataframe containing the normal vectors for each face
+        
+        face_center: dataframe containing the coordinates of the center points of each face
+    '''
+
+    verts = []
+    verts_x = []
+    verts_y = []
+    verts_x = []
+    points= ['x','y','z']
+
+    for point in points:
+        verts = []
+        for vert_num in df_f[point]:
+            # print(vert_num)
+            vert_x = df_v['x'][vert_num-1]
+            vert_y = df_v['y'][vert_num-1]
+            vert_z = df_v['z'][vert_num-1]
+
+            vert_coords = [vert_x , vert_y , vert_z]
+            # print(vert_coords)
+
+            verts.append(vert_coords)
+        if point == 'x':
+            verts_x = verts
+        elif point == 'y':
+            verts_y = verts
+        elif point == 'z':
+            verts_z = verts
+        #print(point)
+
+    # the coordinates of the first vertex of the face
+    df_X = pd.DataFrame(verts_x, columns = ['x', 'y','z'])
+
+    # the coordinates of the second vertex of the face
+    df_Y = pd.DataFrame(verts_y, columns = ['x', 'y','z'])
+
+    # the coordinates of the third vertex of the face
+    df_Z = pd.DataFrame(verts_z, columns = ['x', 'y','z'])
+    
+    # find the center of each face
+    face_center = (df_X + df_Y + df_Z)/3
+
+    # the vector connecting the first and second points   
+    V_12 = df_Y - df_X
+    
+    # the vector connecting the first and third points
+    V_13 = df_Z - df_X
+
+    # computing the normal vectors
+    norms = np.cross(V_12,V_13)
+    df_N = pd.DataFrame(norms, columns = ['u', 'v','w'])
+
+    return df_N, face_center
