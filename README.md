@@ -47,6 +47,8 @@ environment.yml
 - [numpy](https://numpy.org/)
 - [scipy](https://pypi.org/project/Scripy/)
 - [plotly](https://plotly.com/)
+- [ipympl]()
+  - only needed to make the matplotlib figures interactable
 
 ### Methods:
 - Write a function that can read the asteroid files and organize the vertices and faces.
