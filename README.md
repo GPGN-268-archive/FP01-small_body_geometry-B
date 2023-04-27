@@ -47,7 +47,7 @@ environment.yml
 - [numpy](https://numpy.org/)
 - [scipy](https://pypi.org/project/Scripy/)
 - [plotly](https://plotly.com/)
-- [ipympl]()
+- [ipympl](https://matplotlib.org/ipympl/)
   - only needed to make the matplotlib figures interactable
 
 ### Methods:
