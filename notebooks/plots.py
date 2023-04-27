@@ -11,8 +11,7 @@ from scipy import ndimage
 
 # import our created function to read files
 from Data_functions import getData
-from Data_functions import normal_vectors
-from vector_functions import vert_vectors2
+from vector_functions import normal_vectors
 
 
 def makePlot(path):
@@ -69,26 +68,3 @@ def plot_normals(path_to_file):
     fig.show()
     
     
-def plot_sphere(path_to_file):
-    
-    norms = normal_vectors(path_to_file)[0]
-    
-    v1 = vert_vectors2(path_to_file)
-    
-    sphere = np.dot(norms,v1.T)
-    df_sphere = pd.DataFrame(sphere, columns = ['u', 'v','w'])
-
-    # plot the normal vectors to the body using plotly cone plot
-
-    fig = go.Figure(data = go.Cone(
-        x=face_center['x'],
-        y=face_center['y'],
-        z=face_center['z'],
-        u=df_sphere['u'],
-        v=df_sphere['v'],
-        w=df_sphere['w'],
-        colorscale='Blues',
-        sizemode="absolute",
-        sizeref=5))
-
-    fig.show()

@@ -1,6 +1,9 @@
 from Data_functions import getData
+from Data_functions import obj_center
 import numpy as np
 import plotly.graph_objects as go
+import pandas as pd
+import plotly.express as px
 
 def switchax(vectors):
 
@@ -78,7 +81,7 @@ def vert_vectors(path_to_file):
     Returns:
         v: a dataframe containing the x, y, and z vector components for each of the verticies
     '''
-    getData(path_to_file)
+    df_v, df_f = getData(path_to_file)
     
     v = df_v - obj_center(path_to_file)
     return v
@@ -103,7 +106,7 @@ def normal_vectors(path_to_file):
         face_center: dataframe containing the coordinates of the center points of each face
     '''
     
-    getData(path_to_file)
+    df_v, df_f = getData(path_to_file)
     
     verts = []
     verts_x = []
@@ -155,49 +158,70 @@ def normal_vectors(path_to_file):
 
     return df_N, face_center
 
-def vert_vectors2(path_to_file):
+
+
+
+def center_to_face(path_to_file):
     
-    getData(path_to_file)
+    center = obj_center(path_to_file)
+    face_centers = normal_vectors(path_to_file)[1]
+    center_to_face = face_centers - center
     
-    verts = []
-    verts_x = []
-    verts_y = []
-    verts_x = []
-    points= ['x','y','z']
+    return center_to_face
 
-    for point in points:
-        verts = []
-        for vert_num in df_f[point]:
-            # print(vert_num)
-            vert_x = df_v['x'][vert_num-1]
-            vert_y = df_v['y'][vert_num-1]
-            vert_z = df_v['z'][vert_num-1]
 
-            vert_coords = [vert_x , vert_y , vert_z]
-            # print(vert_coords)
+def scale_vectors(vectors_df):
+    '''
+    Takes a pandas dataframe with 3 dimensional vectors (i, j, and k components respectively)
+    '''
+    if 'x' in pd.DataFrame.keys(vectors_df):
+        x_scaled = vectors_df['x']/((vectors_df['x']**2 + vectors_df['y']**2 + vectors_df['z']**2)**0.5)
+        y_scaled = vectors_df['y']/((vectors_df['x']**2 + vectors_df['y']**2 + vectors_df['z']**2)**0.5)
+        z_scaled = vectors_df['z']/((vectors_df['x']**2 + vectors_df['y']**2 + vectors_df['z']**2)**0.5)
 
-            verts.append(vert_coords)
-        if point == 'x':
-            verts_x = verts
-        elif point == 'y':
-            verts_y = verts
-        elif point == 'z':
-            verts_z = verts
-        #print(point)
+    else:
+        x_scaled = vectors_df['u']/((vectors_df['u']**2 + vectors_df['v']**2 + vectors_df['w']**2)**0.5)
+        y_scaled = vectors_df['v']/((vectors_df['u']**2 + vectors_df['v']**2 + vectors_df['w']**2)**0.5)
+        z_scaled = vectors_df['w']/((vectors_df['u']**2 + vectors_df['v']**2 + vectors_df['w']**2)**0.5)
 
-    # the coordinates of the first vertex of the face
-    df_X = pd.DataFrame(verts_x, columns = ['x', 'y','z'])
-    #print(df_X)
-    #print('======')
-
-    # the coordinates of the second vertex of the face
-    df_Y = pd.DataFrame(verts_y, columns = ['x', 'y','z'])
-    #print(df_Y)
-    #print('======')
-
-    # the coordinates of the third vertex of the face
-    df_Z = pd.DataFrame(verts_z, columns = ['x', 'y','z'])
-    #print(df_Z)
+    vectors_scaled = pd.concat([x_scaled, y_scaled, z_scaled], axis=1,)
     
-    v = df_X - obj_center(path_to_file)
-    return v
+    return vectors_scaled
+
+
+def dot_product(path_to_file):
+    
+    normals, face_center = normal_vectors(path_to_file)
+    normals_scaled = scale_vectors(normals)
+    
+    face_vectors = center_to_face(path_to_file)
+    face_vectors_scaled = scale_vectors(face_vectors)
+    
+    dots = []
+    
+    for i in range(len(face_vectors_scaled)):
+        vector_face = face_vectors_scaled.loc[i]
+        vector_norm = normals_scaled.loc[i]
+        dots.append(np.dot(vector_face,vector_norm))
+    
+    df_dots = pd.DataFrame(dots)
+    return df_dots
+
+
+def plot_sphere(path_to_file):
+    
+    normals, face_center = normal_vectors(path_to_file)
+    
+    sphere = pd.concat([face_center,dot_product(path_to_file)], axis = 1)
+    
+    fig = px.scatter_3d(sphere, x='x', y='y', z='z', 
+                        color=0)
+    
+    return fig.show()
+
+def avg_spherisity(path_to_file):
+    
+    dots = dot_product(path_to_file)
+    avgSphere = dots.mean(axis=0)
+    
+    return avgSphere

@@ -58,7 +58,7 @@ def obj_center(path_to_file):
     Returns:
         center_point: a list containing the x, y, and z coordinates of the geometric center
     '''
-    getData(path_to_file)
+    df_v, df_f = getData(path_to_file)
     
     av_x = np.sum(df_v['x'])/len(df_v['x'])
     av_y = np.sum(df_v['y'])/len(df_v['y'])
@@ -66,3 +66,4 @@ def obj_center(path_to_file):
 
     center_point = [av_x,av_y,av_z]
     return center_point
+
