@@ -4,8 +4,16 @@
 ### Project Summary:
 - In the past 50 years, NASA and related organizations have worked to collect data about the geometry of many known small bodies in space. The 3D Asteroid Catalogue is a database that catalogues the geometry of thousands of small bodies. Our goal is to use this data to analyze several small bodies and determine how the object's relative sphericity may relate to other influencing factors, such as size, location, orbital characteristics, and other parameters. 
 ### How to Use this Repository:
--
-
+- This repository includes all the code and functions required to make these models work. As well, a few sample data files are available for test and simple viewing.
+1. Read through this readme file to understand what the goal and purposes of this project were. 
+2. Take a look at our environment.yml file to know what python libraries are required to run this project.
+3. Clone this respository and its components. You will see the following:
+data/
+notebooks/
+README.md
+environment.yml
+4. data/ contains the object files used in the example problems and plots. You can download similar asteroid object files from [3D Asteroid Catalogue](https://3d-asteroids.space/) in order to create your own plots.
+5. notebooks/ contain all the code that was written during development and finalization. The [] directory contains all .py functions necessary, while [] contains any scratch code we created in our development. A complete demonstration of the whole project's process, as well as our conclusions, is contained in the [] notebook and is a helpful example of what our project and individual functions will do.
 
 ### Introduction:
 
