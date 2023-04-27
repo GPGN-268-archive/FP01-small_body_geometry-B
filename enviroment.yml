@@ -1,9 +1,10 @@
 name: GPGN268
 channels:
- - conda-
+ - conda-forge
 dependencies:
-matplotlib
-plotly
-numpy
-pandas
-ipympl
+  - matplotlib
+  - plotly
+  - numpy
+  - pandas
+  - ipympl
+  - scripy
