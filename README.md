@@ -9,11 +9,12 @@
 2. Take a look at our environment.yml file to know what python libraries are required to run this project.
 3. Clone this respository and its components. You will see the following:
 data/
+dev/
 notebooks/
 README.md
 environment.yml
 4. data/ contains the object files used in the example problems and plots. You can download similar asteroid object files from [3D Asteroid Catalogue](https://3d-asteroids.space/) in order to create your own plots.
-5. notebooks/ contain all the code that was written during development and finalization. The [] directory contains all .py functions necessary, while [] contains any scratch code we created in our development. A complete demonstration of the whole project's process, as well as our conclusions, is contained in the [] notebook and is a helpful example of what our project and individual functions will do.
+5. notebooks/ and dev/ contain all the code that was written during development and finalization. The py_functions/ directory contains all .py functions necessary, while dev/ contains any scratch code we created in our development. A complete demonstration of the whole project's process, as well as our conclusions, is contained in the complied_code notebook and is a helpful example of what our project and individual functions will do.
 
 ### Introduction:
 
