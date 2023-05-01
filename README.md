@@ -1,3 +1,4 @@
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/GPGN-268/FP01-small_body_geometry-B/HEAD)
 # Identifying Small Body Sphericity and Correlating Factors
 - **Team Leader:** Jalen Perkins (Jalen-Perkins)
 - **Other Group Members:** Madeline Pastuszek (madelinepast), Nathan Bigelow (Nbig17)
